@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  lfs:
+    build: https://github.com/datopian/giftless.git
+    environment:
+      GIFTLESS_CONFIG_STR: '{"AUTH_PROVIDERS":["giftless.auth.allow_anon:read_write"]}'
+    volumes:
+      - ./lfs-storage:/lfs-storage
+    command: -M -T --threads 2 -p 2 --manage-script-name --callable app --http 0.0.0.0:8080
+    ports:
+      - 8080:8080
+
