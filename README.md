@@ -1,5 +1,5 @@
 # kidi-registry-test2
 
-**Warning**
+> **Warning**
 
 > This is a warning ! `sddfsadf` sdfsdf
